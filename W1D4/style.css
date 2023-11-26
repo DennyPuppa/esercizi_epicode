@@ -24,6 +24,11 @@ h4 {
     padding: 0;
 }
 
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
     background-color: var(--logo-bg);
 }
@@ -104,8 +109,14 @@ h4 {
     padding: 10px;
 }
 
+.linkShop{
+    color: var(--link-color);
+    padding-left: 10px;
+}
+
 .firstSection{
     background-color: white;
+    margin: 0 20px;
 }
 
 .firstSectionImg {
@@ -115,14 +126,15 @@ h4 {
     align-items: center;
     gap: 25px;
     padding: 10px;
-
 }
 
 .productImg {
-    width: 200px;
+    max-height: 350px;
     border-radius: 15px;
     min-height: 250px;
     object-fit: cover;
+    -webkit-box-shadow: 10px 10px 30px -11px rgba(0,0,0,0.53); 
+    box-shadow: 10px 10px 30px -11px rgba(0,0,0,0.53);
 }
 
 .endSections {
@@ -134,3 +146,105 @@ h4 {
     height: 350px;
     object-fit: cover;
 }
+
+.extraSection{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.extraSectionProduct{
+    background-color: white;
+    margin: 0 10px 0 20px;
+}
+
+.extraSectionTitle{
+    padding: 20px;
+    margin-left: 20px;
+    font-size: x-large;
+}
+
+.extraImg{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 25px;
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.extraImg .extraProductImg{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.extraSectionLink{
+    color: var(--link-color);
+    padding: 30px 20px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.positionNew{
+    position: relative;
+}
+
+.newProduct{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+}
+
+.topFooter{
+    background-color: var(--navbar-bg);
+    text-align: center;
+    padding: 20px;
+}
+
+.backTop{
+    color: var(--link-nav);
+}
+
+.logoFooter{
+    background-color: var(--logo-bg);
+    max-height: 250px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.footerImg{
+    width: 200px;
+    /* position: absolute;
+    transform: translate(-50%, -50%); */
+}
+
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    width: 25%;
+}
+
+.grid-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+} */
