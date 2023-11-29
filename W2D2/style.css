@@ -1,0 +1,128 @@
+:root{
+    --header-bg: #333333;
+    --navbar-bg: #EEEEEE;
+    --link-nav: white;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h3{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+.navLogo{
+    background-color: var(--header-bg);
+    color: white;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomNav{
+    background-color: var(--navbar-bg);
+    height: 40px;
+}
+
+.navLinks{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.navLinks li:hover{
+    color: blue;
+}
+
+.boxCard{
+    margin: 50px 100px 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card{
+    width: 250px;
+    height: 300px;
+    position: relative;
+    opacity: 1;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.cardImg img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.textImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+.card:hover > .textImg{
+    display: block;
+}
+
+.card:hover > .cardImg{
+    opacity: 0.7;
+}
+
+.websiteFooter{
+    background-color: var(--header-bg);
+    color: white;
+}
+
+.topFooter{
+    padding: 20px 0 20px 0;
+}
+
+.footerLinks{        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footerCol{
+    padding: 20px;
+}
+
+.footerColList{
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.bottomFooter{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
