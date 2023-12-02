@@ -1,0 +1,334 @@
+:root{
+    --font-color: black;
+    --font2-color: #6B6B6B;
+    --category-color: #F2F2F2;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    color: var(--font2-color);
+}
+
+/* CLASSE GENERICA SPACING */
+
+.spacing{
+    padding: 0 100px 0 100px;
+}
+
+/* CSS NAVBAR SITO WEB */
+
+.logo-img{
+    width: 200px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 6px 20px -15px #000000;
+}
+
+.info-navbar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    color: var(--font2-color);
+    gap: 20px;
+}
+
+.button-member, .twitter-button, .follow-button{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.button-member:hover,
+.twitter-button:hover,
+.follow-button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.6s;
+}
+
+.user-profile-img{
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 50%;
+    background-image: url(./assets/author-img.jpg);
+    background-size: cover;
+}
+
+/* CSS DEL CONTENUTO PRINCIPALE */
+
+.main-blog{
+    display: flex;
+}
+
+.left-blog{
+    border-right:1px solid lightgray;
+    width: 65%;
+}
+
+.right-blog{
+    width: 35%;
+}
+
+/* CSS SEZIONE SINISTRA */
+
+.blog-category{
+    padding: 40px 0 10px 0;
+    display: flex;
+    gap: 20px;
+    color: var(--font2-color);
+    border-bottom: 1px solid lightgrey;
+    margin-right: 30px;
+    /* position: relative; */
+}
+
+.blog-category h4:hover{
+    color: black;
+    /* border-bottom: 1px solid black;
+    position: absolute;
+    bottom: 0; */
+}
+
+/* CSS SINGOLO ARTICOLO */
+
+.article-box{
+    display: flex;
+    align-items: center;
+    margin: 50px 30px 50px 0;
+}
+
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-profile-img{
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.author-info span{
+    color: var(--font2-color);
+}
+
+.evidence-img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.text-article{
+    padding-right: 20px;
+}
+
+.text-article p{
+    font-size: large;
+    color: var(--font2-color);
+}
+
+.info-article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.callout{
+    display: flex;
+    gap: 10px;
+    color: var(--font2-color);
+}
+
+.callout li{
+    padding: 5px;
+}
+
+.callout li:nth-child(1){
+    padding-left: 0;
+}
+
+.category-callout{
+    background-color: var(--category-color);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.info-icon{
+    display: flex;
+    gap: 20px;
+    font-size: large;
+    padding-right: 20px;
+}
+
+/* CSS SEZIONE DESTRA */
+
+.spacing-right{    
+    margin: 50px;
+}
+
+.box-twitter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 30px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.logo-twitter{
+    width: 150px;
+}
+
+.box-topics h3,
+.box-follow h3,
+.box-recent h3{
+    margin-bottom: 20px;
+}
+
+.all-topics{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.single-topics{
+    background-color: var(--category-color);
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.single-topics:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.7s;
+}
+
+.follow-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 10px 0;
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(./assets/author-img.jpg);
+    background-size: cover;
+}
+
+.user-info span{
+    font-size: 12px;
+    color: var(--font2-color);
+}
+
+.margin{
+    margin: 20px 0;
+}
+
+.callout-right{
+    font-size: small;
+}
+
+.see-more a{
+    color: green;
+    font-size: small;
+}
+
+.useful-links{
+    color: var(--font2-color);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1148px) {
+    /* .sum-article{
+        width: 40%;
+    } */
+
+    .article-box{
+        flex-wrap: wrap;
+    }
+    
+  }
+
+  @media screen and (max-width: 1000px) {
+    /* .sum-article{
+        width: 40%;
+    } */
+
+    .main-blog{
+        flex-wrap: wrap;
+    }
+
+    .right-blog{
+        width: auto;
+    }
+
+    .left-blog{
+        width: auto;
+        border: none;
+    }
+
+    .evidence-img{
+        display: none;
+    }
+    
+  }
+
+  @media screen and (max-width: 800px) {
+
+    .icon, .button-member{
+        display: none;
+    }
+   
+  }
