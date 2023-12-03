@@ -178,6 +178,8 @@ a{
 
 .callout li{
     padding: 5px;
+    font-size: small;
+    text-align: center;
 }
 
 .callout li:nth-child(1){
@@ -200,7 +202,7 @@ a{
 /* CSS SEZIONE DESTRA */
 
 .spacing-right{    
-    margin: 50px;
+    margin: 50px 0 50px 50px;
 }
 
 .box-twitter{
@@ -294,6 +296,9 @@ a{
     /* .sum-article{
         width: 40%;
     } */
+    .spacing{
+        padding: 0 50px 0 50px;
+    }
 
     .article-box{
         flex-wrap: wrap;
@@ -301,7 +306,7 @@ a{
     
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1024px) {
     /* .sum-article{
         width: 40%;
     } */
@@ -328,6 +333,43 @@ a{
   @media screen and (max-width: 800px) {
 
     .icon, .button-member{
+        display: none;
+    }
+   
+  }
+
+  @media screen and (max-width: 431px) {
+
+    .spacing{
+        padding: 0 20px 0 20px;
+    }
+
+    .article-box{
+        margin: 30px 10px 50px 10px;
+    }
+
+    .blog-category{
+        margin: 0 0 0 10px;
+    }
+
+    .callout li{
+        padding: 5px;
+        font-size: small;
+    }
+
+    .callout li:nth-child(4){
+        display: none;
+    }
+
+    .spacing-right{
+        margin: 40px 20px;
+    }
+   
+  }
+
+  @media screen and (max-width: 376px) {
+
+    .user-info span{
         display: none;
     }
    
