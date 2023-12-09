@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-header flex">
+            <div class="logo-container">
+                <img src="https://store.nintendo.it/images/logo-nintendo.svg" alt="" class="logo">
+                <h1>Nintendo Store</h1>
+            </div>
+            <div class="input-container">
+                <input type="text" id="input-field">
+            </div>
+            <div class="top-buttons-container flex">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+        <nav class="top-menu">
+            <ul class="flex">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Console</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav>
+        <ul id="bottom-menu" class="flex">
+
+        </ul>
+    </nav>
+    <div class="breacrump">
+        <a href="#">Home/Giochi</a>
+    </div>
+
+    <div class="main-content flex">
+        <aside class="flex">
+            <h3>Filtri</h3>
+            <section class="disp">
+                <h3>Disponibilità</h3>
+                <input type="checkbox" id="disp-check">
+                <label for="disp-check">Nascondi articoli esauriti</label>
+            </section>
+            <section class="price flex">
+                <h3>Prezzo</h3>
+                <div>
+                    <input type="checkbox" id="disp-check">
+                    <label for="disp-check">Fino a 10&#8364; (31)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="disp-check">
+                    <label for="disp-check">Fino a 10&#8364; (31)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="disp-check">
+                    <label for="disp-check">Fino a 10&#8364; (31)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="disp-check">
+                    <label for="disp-check">Fino a 10&#8364; (31)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="disp-check">
+                    <label for="disp-check">Fino a 10&#8364; (31)</label>
+                </div>
+            </section>
+        </aside>
+
+        <main>
+            <div class="top-info flex">
+                <p class="n-result">
+                    306 Risultati
+                </p>
+                <button class="ord">
+                    Prodotti recenti
+                </button>
+            </div>
+            <div class="cards-container flex" id="card-container">
+                <div class="card">
+                    <img src="https://picsum.photos/200/300" alt="" class="card-img">
+                    <h2>Titolo Card</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, natus.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
