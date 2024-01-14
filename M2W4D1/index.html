@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Needers</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo-footer.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- OVERLAY visibile a evento JS -->
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-container">
+            <h2>Vuoi metterti in contatto con l'utente selezionato?</h2>
+            <button class="form-btn">Contatta ora!</button>
+        </div>
+        <button class="btn-close"><i class="fa-solid fa-x"></i></button>
+    </div>
+
+    <!-- WEBSITE -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="./img/logo.png" alt="Logo Job Needers" class="logo">
+        </div>
+        <div class="form-group">
+            <form id="form">
+                <input type="text" placeholder="search job" id="search-job" class="form-field">
+                <input type="text" placeholder="search place" id="search-place" class="form-field">
+        
+                <button type="submit" class="form-btn">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="single-card" style="margin: 0 auto; margin-top: 50px;">
+            <h2>Need a position?</h2>
+            <p>Compila il form inserendo la posizione che vuoi ricercare e la località</p>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <div class="logo-footer">
+            <img src="./img/logo-footer.png" alt="">
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
