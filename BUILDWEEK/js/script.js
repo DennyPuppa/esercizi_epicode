@@ -1,6 +1,103 @@
-//variabile e funzione per iniziare esame
-const proceed = document.querySelector("#btn-exam")
+let questionIndex = 2; // da 1 a 10
+let clockSeconds = 60; // valore a caso, possiamo lasciare un minuto o decidere di cambiare a seconda della difficoltà
+let score = 0;       //incrementa ad ogni risposta corretta
 
-proceed.addEventListener('click', () => {
-    window.location.href = "exam.html";
-})
+// populateQuestion()
+nextQuestion()
+
+
+function nextQuestion() {
+
+    if (questionIndex < questions.length) {
+
+        populateQuestion()
+        const buttons = document.querySelectorAll(".btn-answer");
+        buttons.forEach((button)=>{
+            button.addEventListener("click", ()=>{
+                // console.log(e.target);
+                console.log(button.textContent);
+                controlAnswer(button.textContent)
+                clockSeconds=0;
+                
+            })
+        })
+        
+
+        if(clockSeconds<1){
+            questionIndex++;
+            nextQuestion()
+        }
+    }
+    else{
+        showResults()
+    }
+
+}
+
+function populateQuestion() {
+    cleanWindow()
+    clock()
+    const questionContainer = document.querySelector("#question-container");
+    const questionTitle = document.createElement("h1");
+    questionTitle.textContent = questions[questionIndex].question;
+    questionContainer.append(questionTitle);
+
+    // const answerBtn = document.querySelectorAll(".btn-answer");
+
+    // const arrayBtn = Array.from(answerBtn);
+    // console.log(arrayBtn);
+    populateBtns()
+    // genere e popola 4 o 2 bottoni in base all'indice dell array questions
+    // riavvia il clock
+}
+
+function populateBtns(){
+    let answerData = questions[questionIndex].incorrect_answers;
+    answerData.push(questions[questionIndex].correct_answer)
+    console.log(answerData);
+    const btnContainer = document.querySelector(".btn-container");
+
+    const shuffledAnswer = shuffleAnswer(answerData);
+
+    shuffledAnswer.forEach(answer => {
+        const btn = document.createElement("button");
+        btn.classList.add("btn-answer");
+        btn.textContent = answer;
+        btnContainer.append(btn);
+    });
+}
+
+function shuffleAnswer(answerArray){
+    return answerArray.sort(()=>Math.random()-0.5)
+}
+
+function controlAnswer(selectedAnswer){
+    //controlla e aumenta score di uno in caso positivo
+    if(selectedAnswer === questions[questionIndex].correct_answer){
+        console.log("corretta");
+        score ++;
+    } else{
+        console.log("non corretta");
+    }
+}
+
+function stopClock(){
+    // forza il clock come se fosse finito il tempo, selezionare una risposta controlla solo la risposta
+}
+
+function cleanWindow() {
+    //pulisce la pagina da elementi variabili 
+
+}
+
+function clock() {  // scandisce solo il tempo usando la variabile globale clockSeconds
+    //setInterval( ,1000);
+}
+
+function showResults() {
+    cleanWindow()
+    // elimina gli elementi popolati da populateQuestion e genere un output html con score
+
+}
+
+
