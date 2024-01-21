@@ -1,7 +1,7 @@
 let questionIndex = 0; // da 1 a 10
 let clockSeconds = 6; // valore a caso, possiamo lasciare un minuto o decidere di cambiare a seconda della difficoltà
 let score = 0;       //incrementa ad ogni risposta corretta
-const timeRange = 6;
+const timeRange = 60;
 // populateQuestion()
 
 nextQuestion()
@@ -150,6 +150,7 @@ function showClock(){
 
     seconds.textContent = "SECONDS";
     timerClock.textContent = clockSeconds;
+    timerClock.classList.add("clock-big-text");
     remaining.textContent = "REMAINING";
 
         if (clockText) {
@@ -166,13 +167,18 @@ function showResults() {
     const mainContainer = document.querySelector("#bigger-container");
     const circle = document.createElement("div");
     const resultsContainer = document.createElement("div");
+    const resultsTitle = document.createElement("h2");
     const resultsText = document.createElement("p");
     resultsContainer.classList.add("results-container");
 
-    resultsText.innerHTML = score + "/" + questions.length;
+    resultsTitle.innerHTML = "Result";
+    resultsTitle.classList.add("subtitle");
+    resultsText.innerHTML ="Your score is: " + score + "/" + questions.length;
+    resultsText.classList.add("results-text")
 
     mainContainer.append(circle);
     circle.append(resultsContainer);
+    resultsContainer.append(resultsTitle);
     resultsContainer.append(resultsText);
 }
 

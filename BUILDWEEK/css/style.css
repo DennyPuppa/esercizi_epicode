@@ -29,7 +29,8 @@ h1, h2, h3, h4, h5, p, figure, ul{
     height: 100%;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* padding-bottom: 20px; */
 }
 
 .logo-img{
@@ -97,4 +98,17 @@ span{
     background: #00fff0;
     box-shadow:  0px 150px 100px #00d9cc,
              0px 0px 30px #00ffff;
+    cursor: pointer;
+}
+
+.unchecked{
+    font-family: 'Outfit', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 0px;
+    background: #000330;
+    color: var(--text-color);
 }
