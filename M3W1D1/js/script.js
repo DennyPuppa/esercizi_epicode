@@ -5,6 +5,15 @@ window.onload = function(){
     linkTwitter.remove();
 }
 
+//JS ESERCIZIO 2
+const links = document.querySelectorAll(".stretched-link");
+links.forEach(link => {
+    link.addEventListener("click", function(event){
+        console.log(event.target.closest(".col-md-6"));
+        event.target.closest(".col-md-6").remove();
+    })
+});
+
 // JS ESERCIZIO 3
 const authors = document.querySelectorAll(".blog-post-meta a");
 authors.forEach(author => {
