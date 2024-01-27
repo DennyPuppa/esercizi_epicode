@@ -21,3 +21,6 @@ authors.forEach(author => {
         alert(author.innerHTML);
     })
 });
+
+//Essendo lo stesso esercizio di inizio settimana non ho cambiato nome, in alternativa se l'esercizio da caricare 
+//era quello sul conflitto GitHub sempre sul mio Github c'è la repository creata apposta per quello...
