@@ -10,7 +10,7 @@ function countTravel(){
 
 countTravel()
 
-function removeCard{
+function removeCard(){
     const allCards = document.querySelectorAll(".card")
 }
 
