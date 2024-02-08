@@ -1,0 +1,29 @@
+.spacing-lg{
+    padding: 0px 32px;
+}
+
+.bg-hero{
+    background-color: #754FFE;
+}
+
+.btn-hero{
+    background-color: #EAEAEA;
+}
+
+.icon-color{
+    background-color: #ffeeda;
+    width: 50px;
+    height: 50px;
+    padding: 16px;
+    border-radius: 50%;
+}
+
+.bg-main{
+    background-color: #f5f4f8;
+}
+
+.carousel-btn-style{
+    background-color: white;
+    border-radius: 24px;
+    padding: 20px;
+}
