@@ -2,6 +2,24 @@
     padding: 0px 32px;
 }
 
+.nav-notifications{
+    width: 40px;
+    height: 40px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 7px;
+}
+
+.nav-account{
+    width: 40px;
+    height: 40px;
+}
+
+.reset-style{
+    border: none;
+    background-color: transparent;
+}
+
 .bg-hero{
     background-color: #754FFE;
 }
@@ -26,4 +44,8 @@
     background-color: white;
     border-radius: 24px;
     padding: 20px;
+}
+
+.info-single-card{
+    font-size: small;
 }

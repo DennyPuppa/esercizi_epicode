@@ -15,7 +15,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light py-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
@@ -54,11 +54,28 @@
                         fill="#754FFE" />
                 </svg>
             </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex gap-2">
+                <div class="d-block d-md-none">
+                    <div class="d-flex justify-content-end gap-2">
+                        <div class="rounded-circle nav-notifications">
+                            <i class="fa-regular fa-bell" style="color: #c2c2c2;"></i>
+                        </div>
+                        <button class="reset-style d-lg-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseProfilePicture" aria-controls="collapseProfilePicture" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <div class="nav-account">
+                                <img class="rounded-circle w-100" src="./assets/avatar-1.jpg" alt="">
+                            </div>
+                        </button>
+                        
+                    </div>
+                </div>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
@@ -74,6 +91,47 @@
                         <a class="nav-link" href="#">Accounts</a>
                     </li>
                 </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="collapseProfilePicture">
+                <div class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <div class="nav-item d-flex align-items-center gap-3 border-bottom py-2">
+                        <div class="nav-account">
+                            <img class="rounded-circle w-100" src="./assets/avatar-1.jpg" alt="">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <p class="m-0 fw-bold">Annette Black</p>
+                            <p class="m-0">annette@geeksui.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column py-2 gap-3 border-bottom">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-regular fa-user"></i>
+                                <p class="m-0">Proile</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-regular fa-star"></i>
+                                <p class="m-0">Subscription</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">              
+                                <i class="fa-solid fa-gear"></i>
+                                <p class="m-0">Setting</p>
+                            </div>
+                    </div>
+                    <div class="d-flex gap-2 py-2 align-items-center">
+                        <i class="fa-solid fa-power-off"></i>
+                        <p class="m-0">Sign Out</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-md-block">
+                <div class="d-flex gap-2">
+                    <div class="rounded-circle nav-notifications">
+                        <i class="fa-regular fa-bell" style="color: #c2c2c2;"></i>
+                    </div>
+                    <div class="nav-account">
+                        <img class="rounded-circle w-100" src="./assets/avatar-1.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -145,11 +203,36 @@
                                             <img class="card-img-top" src="./assets/course-graphql.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div class="d-flex align-items-center gap-1 info-single-card">
+                                                            <img class="rounded-circle w-25" src="./assets/avatar-1.jpg"
+                                                                alt="">
+                                                            <p class="m-0">Brooklyn Simons</p>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -159,15 +242,40 @@
                                             <img class="card-img-top" src="./assets/course-javascript.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div class="d-flex align-items-center gap-1 info-single-card">
+                                                            <img class="rounded-circle w-25" src="./assets/avatar-1.jpg"
+                                                                alt="">
+                                                            <p class="m-0">Brooklyn Simons</p>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -178,11 +286,36 @@
                                             <img class="card-img-top" src="./assets/course-gatsby.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div class="d-flex align-items-center gap-1 info-single-card">
+                                                            <img class="rounded-circle w-25" src="./assets/avatar-1.jpg"
+                                                                alt="">
+                                                            <p class="m-0">Brooklyn Simons</p>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -192,25 +325,52 @@
                                             <img class="card-img-top" src="./assets/course-css.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center info-single-card gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div class="d-flex align-items-center gap-1 info-single-card">
+                                                            <img class="rounded-circle w-25" src="./assets/avatar-1.jpg"
+                                                                alt="">
+                                                            <p class="m-0">Brooklyn Simons</p>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselMobileOne" data-bs-slide="prev">
-                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i class="fa-solid fa-chevron-left" style="color: #bfbfbf;"></i></span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMobileOne"
+                            data-bs-slide="prev">
+                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-left" style="color: #bfbfbf;"></i></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button"
-                            data-bs-target="#carouselMobileOne" data-bs-slide="next">
-                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i class="fa-solid fa-chevron-right" style="color: #bfbfbf;"></i></span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMobileOne"
+                            data-bs-slide="next">
+                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-right" style="color: #bfbfbf;"></i></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
@@ -227,11 +387,39 @@
                                             <img class="card-img-top" src="./assets/course-graphql.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -241,11 +429,39 @@
                                             <img class="card-img-top" src="./assets/course-javascript.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -255,11 +471,39 @@
                                             <img class="card-img-top" src="./assets/course-node.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -269,11 +513,39 @@
                                             <img class="card-img-top" src="./assets/course-laravel.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -287,11 +559,39 @@
                                             <img class="card-img-top" src="./assets/course-python.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -301,11 +601,39 @@
                                             <img class="card-img-top" src="./assets/course-html.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -315,11 +643,39 @@
                                             <img class="card-img-top" src="./assets/course-gatsby.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -329,25 +685,55 @@
                                             <img class="card-img-top" src="./assets/course-css.jpg"
                                                 alt="Card image cap">
                                             <div class="card-body">
-                                                <h5 class="card-title">GraphQL: introduction to graphQL for beginners
-                                                </h5>
-                                                <h5 class="card-title">Artista</h5>
-                                                <p class="card-text">Genere Album</p>
-                                                <p class="card-text">Durata:</p>
+                                                <h6 class="card-title">GraphQL: introduction to graphQL for beginners
+                                                </h6>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-regular fa-clock" style="color: #bfbfbf;"></i>
+                                                    <p class="m-0">2h 40m</p>
+                                                    <i class="fa-solid fa-signal" style="color: #B197FC;"></i>
+                                                    <p class="m-0">Advance</p>
+                                                </div>
+                                                <div class="d-flex align-items-center py-2 gap-1">
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star-half-stroke"
+                                                        style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <i class="fa-regular fa-star" style="color: #FFD43B;"></i>
+                                                    <p class="m-0 ">2.5</p>
+                                                    <p class="m-0 ">(1,500)</p>
+                                                </div>
+                                                <p class="m-0 py-2 fw-bold">$500</p>
+                                                <div class="row">
+                                                    <div class="col border-top pt-1">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between gap-1">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <img class="rounded-circle w-25"
+                                                                    src="./assets/avatar-1.jpg" alt="">
+                                                                <p class="m-0">Brooklyn Simons</p>
+                                                            </div>
+                                                            <i class="fa-regular fa-bookmark"
+                                                                style="color: #a1a1a1;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button"
-                            data-bs-target="#carouselOne" data-bs-slide="prev">
-                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i class="fa-solid fa-chevron-left" style="color: #bfbfbf;"></i></span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOne"
+                            data-bs-slide="prev">
+                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-left" style="color: #bfbfbf;"></i></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button"
-                            data-bs-target="#carouselOne" data-bs-slide="next">
-                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i class="fa-solid fa-chevron-right" style="color: #bfbfbf;"></i></span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselOne"
+                            data-bs-slide="next">
+                            <span class="carousel-btn-style rounded-circle bg-black" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-right" style="color: #bfbfbf;"></i></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
