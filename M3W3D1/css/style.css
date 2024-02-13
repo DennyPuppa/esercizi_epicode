@@ -49,3 +49,24 @@
 .info-single-card{
     font-size: small;
 }
+
+.arrow-style-prev, 
+.arrow-style-next{
+    background-color: white;
+    opacity: 1 !important;
+}
+
+.arrow-position-prev{
+    left: -99px
+}
+
+.arrow-position-next{
+    right: -99px;
+}
+
+/* ANIMATION */
+.card-animation:hover{
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    overflow: visible;
+}
