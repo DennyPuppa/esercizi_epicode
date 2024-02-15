@@ -57,13 +57,15 @@
             <div class="d-flex gap-2">
                 <div class="d-block d-md-none">
                     <div class="d-flex justify-content-end gap-2">
-                        <div class="rounded-circle nav-notifications">
+                        <div class="rounded-circle nav-notifications position-relative">
+                            <div class="rounded-circle notification-abs position-absolute"></div>
                             <i class="fa-regular fa-bell" style="color: #c2c2c2;"></i>
                         </div>
                         <button class="reset-style d-lg-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseProfilePicture" aria-controls="collapseProfilePicture" aria-expanded="false"
                             aria-label="Toggle navigation">
-                            <div class="nav-account">
+                            <div class="nav-account position-relative">
+                                <div class="rounded-circle notification-profile-abs position-absolute "></div>
                                 <img class="rounded-circle w-100" src="./assets/avatar-1.jpg" alt="">
                             </div>
                         </button>
@@ -125,10 +127,12 @@
             </div>
             <div class="d-none d-md-block">
                 <div class="d-flex gap-2">
-                    <div class="rounded-circle nav-notifications">
+                    <div class="rounded-circle nav-notifications position-relative ">
+                        <div class="rounded-circle notification-abs position-absolute "></div>
                         <i class="fa-regular fa-bell" style="color: #c2c2c2;"></i>
                     </div>
-                    <div class="nav-account">
+                    <div class="nav-account position-relative ">
+                        <div class="rounded-circle notification-profile-abs position-absolute "></div>
                         <img class="rounded-circle w-100" src="./assets/avatar-1.jpg" alt="">
                     </div>
                 </div>
