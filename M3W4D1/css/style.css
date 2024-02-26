@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'netflixFont-regular';
+    /* nome del font */
+    src: url('../font/NetflixSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'netflixFont-medium';
+    /* nome del font */
+    src: url('../font/NetflixSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'netflixFont-light';
+    /* nome del font */
+    src: url('../font/NetflixSans-Light.woff2') format('woff2');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'netflixFont-bold';
+    /* nome del font */
+    src: url('../font/NetflixSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+:root{
+    --text-color: #fff;
+    --text-color-2: #E5E5E5;
+    --text-footer-color: hsl(0, 0%, 60%);
+}
+
+/* ora utilizza il font */
+body {
+    font-family: 'netflixFont-regular', sans-serif;
+    /* richiamalo qui */
+    background-color: #141414;
+    color: var(--text-color);
+}
+
+a, li{
+    text-decoration: none;
+}
+
+.navbar-brand {
+    width: 92px;
+}
+
+.nav-link {
+    color: var(--text-color-2);
+}
+
+.nav-link:hover {
+    color: var(--text-color-2);
+    font-weight: bold;
+}
+
+.navbar-fixed{
+    position: fixed;
+    background-color: #141414;
+    z-index: 3;
+    max-width: 1320px;
+    top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar-fixed{
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-fixed{
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar{
+        padding: 0px 20px;
+    }
+}
+
+.show-navbar{
+    animation: showNav 0.4s ease-in forwards;
+}
+
+@keyframes showNav {
+    from{
+        top: -100px;
+    }
+    to{
+        top: 0px;
+    }
+}
+
+.hide-navbar{
+    animation: hideNav 0.8s ease-in forwards;
+}
+
+@keyframes hideNav {
+    from{
+        top: 0;
+    }
+    to{
+        top: -100px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    @keyframes hideNav {
+        from{
+            top: 0;
+        }
+        to{
+            top: calc(-100%);
+        }
+    }
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.custom-toggler.navbar-toggler{
+    color: white !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 0' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+h1{
+    font-family: 'netflixFont-bold', sans-serif;
+    font-size: 32px;
+}
+
+.genres-selection{
+    background-color: #141414;
+    border: 1px solid var(--text-footer-color);
+    color: var(--text-color);
+}
+
+.select-vision-icon{
+    border: 1px solid var(--text-color);
+}
+
+section div h3{
+    font-size: 24px;
+    font-family: 'netflixFont-bold',sans-serif;
+}
+
+.swiper {
+    width: 100%;
+    height: 150px;
+    overflow: visible !important;
+}
+
+.swiper-slide {
+    width: auto !important;
+    transition: all 0.3;
+}
+
+.swiper-slide:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.card-container{
+    /* background-image: url("../assets/imgs/movies/1.png"); */
+    width: 250px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card-over-section{
+    opacity: 0;
+}
+
+.card-description{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.play-button{
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.card-container:hover .play-button{
+    opacity: 1;
+    text-shadow:3px 3px 10px rgba(0,0,0,.75);
+}
+
+@media screen and (max-width: 768px) {
+    .play-button{
+        text-shadow:3px 3px 10px rgba(0,0,0,.75);
+        opacity: 1;
+    }
+}
+
+.progress{
+    border-radius: 0px;
+}
+
+.card-container:hover .card-description{
+    transform: translateY(0);
+}
+
+.row-enter-animation{
+    animation: fadeInOutCarousel 0.5s ease-in-out;
+}
+
+.row-hidden{
+    opacity: 0;
+}
+
+@keyframes fadeInOutCarousel {
+    from{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-top-btn{
+    background-color: #141414;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    width: 50px;
+    height: 50px;
+    font-size: larger;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    z-index: 4;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .scroll-top-btn{
+        right: 50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .scroll-top-btn{
+        bottom: 25px;
+        right: 25px;
+    }
+}
+
+/* .swiper-slide .swiper-slide-active{
+    opacity: 0.5;
+} */
+footer{
+    font-family: 'netflixFont-ligth', sans-serif;
+}
+
+.footer-social{
+    color: var(--text-footer-color);
+}
+
+.footer-link a,
+.footer-copyright{
+    color: var(--text-footer-color);
+}
+
+.footer-btn{
+    background-color: transparent;
+    border: 1px solid var(--text-footer-color);
+    color: var(--text-footer-color);
+    border-radius: 0;
+}
+
+.footer-btn:hover{
+    color: var(--text-color);
+}
