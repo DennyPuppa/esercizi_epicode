@@ -19,11 +19,12 @@ getBookCard().then(res => {
     .map((book) => {
         return /* HTML */ `<div class="col-12 col-md-3">
         <div id="book-${book.asin}" class="card mb-3 rounded-3 shadow">
-            <img src="${book.img}" alt="">
+            <a href="dettagli.html?id=${book.asin}"><img src="${book.img}" alt=""></a>
             <div class="card-body">
                 <p class="text-truncate book-title"> ${book.title} </p>
                 <p class="book-price"> ${book.price}€</p>
                 <button class="btn btn-primary" onclick="addCart('${book.asin}', '${book.title}', '${book.price}')">Aggiungi al Carrello</button>
+                <button class="btn btn-primary" onclick="hideBook('${book.asin}')">Salta</button>
             </div>
         </div>
     </div>`
@@ -64,4 +65,9 @@ const removeChart = (event, price, asin) => {
     const card = document.querySelector("#book-" + asin)
     console.log(card);
     card.classList.remove("book-purchased")
+}
+
+const hideBook = (asin) => {
+    const book = document.querySelector("#book-" + asin)
+    book.classList.add("hide-book");
 }
